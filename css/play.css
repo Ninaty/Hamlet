@@ -9,7 +9,7 @@ body {
 
 section.TOC {
 margin: 0px;
-padding: 0px;
+padding-bottom: 10px;
 }
 
 
@@ -23,12 +23,7 @@ section.play, section.dramatis  {
 }
 
 /* This extra style rule here makes sure that the linked location is not hidden inder the fixed header */
-h1 a, h2 a {
-  margin-top: -2.4rem;
-  padding-bottom: 2.4rem;
-  display:block;
-  background: white;
-}
+
 
 img {
   width:100%;
@@ -63,6 +58,7 @@ color: #921215;
 p.charactername {
 margin:0 12px 0 20px;
   color: #921215;
+  padding-bottom: 5px;
 }
 
 
@@ -92,6 +88,7 @@ p.song {
 h2.stagedirection {
   font-size: 1rem;
 text-align: right;
+padding-right: 30px;
 }
 p.verseline {
 margin: 0 12px 0 50px;
@@ -181,8 +178,6 @@ li {
 }
 
 
-
-
 li a {
   color: #fff;
 }
@@ -220,91 +215,95 @@ ul li:hover > ul, ul li ul:hover {
 
 @media only screen and (min-width: 720px) {
 
-h1.act, h1.dramatishead {
-  font-size: 200%;
-}
+  h1.act, h1.dramatishead {
+    font-size: 200%;
+  }
 
 
 
-a.menu {
-  display:none;
-}
+  a.menu {
+    display:none;
+  }
 
-ul {
-  background: #691515;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  padding-top: 0px;
-  position: fixed;
-  top:0;
-  left:0;
-  width: 100%;
-}
+  ul {
+    background: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    padding-top: 0px;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+  }
 
-li {
+
+  .TOC-Heading-1 {
+    width: 120px;
+  }
+
+  .TOC-Heading-2 {
+    padding: 15px;
+  }
+
+  li {
+      color: #fff;
+      display: block;
+      float: left;
+      padding-top: 1rem;
+      position: relative;
+      text-decoration: none;
+    transition-duration: 0.5s;
+
+  }
+
+  li a {
     color: #fff;
-  background: #691515;
-    display: block;
-    float: left;
     padding: 1rem;
-    position: relative;
-    text-decoration: none;
-  transition-duration: 0.5s;
-}
+  }
 
-li a {
-  color: #fff;
-}
+  li:hover,
+  li:focus-within {
+      background: red;
+      cursor: pointer;
+  }
 
-li:hover,
-li:focus-within {
-    background: red;
-    cursor: pointer;
-}
+  li:focus-within a {
+    outline: none;
+  }
 
-li:focus-within a {
-  outline: none;
-}
-
-ul li ul {
-    background: #691515;
+  ul li ul, ul li > ul {
+      background: #691515;
     visibility: hidden;
-  opacity: 0;
-  min-width: 4rem;
-    position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 3rem;
-  margin-left: 1.5rem;
-    left: 0;
+    /* opacity: 0; */
+    min-width: 4rem;
+      /* position: absolute; */
+    transition: all 0.5s ease;
+    margin-top: 1rem;
   display: none;
-}
+  }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus {
-   visibility: visible;
-   opacity: 1;
-   display: block;
-}
+ul li:hover {
+     visibility: visible;
+     display: block;
+  }
 
-ul li ul li {
-    clear: both;
-  width: 100%;
-}
+  ul li ul li {
+      clear: both;
+    width: 100%;
+  }
 
 
-#navigation:target {
-  width: auto;
-}
+  #navigation:target {
+    width: auto;
+  }
 
-p.prose, p.verseline {
-margin: 0 12px 0 60px;
-}
+  p.prose, p.verseline {
+  margin: 0 12px 0 60px;
+  }
 
-p.prose {
-  margin-bottom: 12px;
-}
+  p.prose {
+    margin-bottom: 12px;
+  }
 
 }
