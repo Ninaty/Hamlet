@@ -1,7 +1,8 @@
 body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
 }
+
 body {
-font: Palatino, Garamond, Times, serif;
+  font-family: verdana, arial, sans-serif;
   margin: 20px;
   background-color: rgb(179, 179, 179);
 }
@@ -12,78 +13,225 @@ padding: 0px;
 }
 
 
-
-
-section.dramatis, section.play {
-  width: 70%;
+section.play, section.dramatis  {
+  width:90%;
   margin: 12px auto;
-  max-width: 1250px;
-  border: 2px solid grey;
-  padding: 0px 10px;
+  max-width: 700px;
+  padding:0 10px;
   background-color: white;
+  border:2px solid gray;
 }
 
-section.dramatis {
-padding-top: 20px;
-
+/* This extra style rule here makes sure that the linked location is not hidden inder the fixed header */
+h1 a, h2 a {
+  margin-top: -2.4rem;
+  padding-bottom: 2.4rem;
+  display:block;
+  background: white;
 }
+
+img {
+  width:100%;
+  font-family: verdana, sans-serif;
+  text-align: center;
+}
+
 
 div.sceneImage {
 }
 
-h1.act, h1.dramatishead {
+
+h1.playtitle {
+  font-size: 400%;
+  visibility: hidden;
+}
+
+h1.act, h1.dramatishead, h1.playtitle {
 text-align: center;
-background-color: grey;
-color: white;
 font-size: 2em;
+background-color: #691515;
+color:white;
 padding: 12px 0;
 }
+
+
 p.character {
-font-size: 1.4em;
+font-size: 1.3em;
 color: #921215;
 }
+
 p.charactername {
-  margin: 0 12px 0 10px;
+margin:0 12px 0 20px;
   color: #921215;
 }
 
-h2.firstscene {
 
+h2.scene, h2.firstscene {
+  font-family: verdana, sans-serif;
+  text-align: center;
+  font-size: 2em;
+  margin: 0 0;
+  padding: 0 0;
 }
 h2.location {
-
+text-align: center;
+font-size: 18px;
 }
 p.play_location {
+  font-weight: bold;
+  margin: 10px 20px;
 
 }
 p.prose {
-  margin: 0 12px 0 60px;
-
-}
-h2.scene {
-
+margin: 0 12px 14px 50px;
 }
 p.song {
-  margin: 0 12px 0 60px;
+  margin: 0 12px 14px 50px;
+
 }
 h2.stagedirection {
-
+  font-size: 1rem;
+text-align: right;
 }
 p.verseline {
-  margin: 0 12px 0 60px;
-
+margin: 0 12px 0 50px;
 }
 span.character_role {
   color: black;
 }
-
 span.stage_directions_inline {
-
+  font-weight: bold;
 }
 
 
+p.playtitle {
+  position:fixed;
+  left:0;
+  top:0;
+  /* height:1rem; */
+  padding: .6rem;
+  color:white;
+  font-family: verdana, sans-serif;
+  font-size:.8em;
+  z-index: 20;
+  margin:0;
+  visibility: hidden;
+}
+
+a.menu {
+  position:fixed;
+  top:0;
+  right:0;
+  color:white;
+  padding: .6rem;
+  color:white;
+  font-family: verdana, sans-serif;
+  font-size:.8em;
+  z-index: 20;
+  margin:0;
+}
+
+a.menu:hover {
+  color:red;
+  cursor:pointer;
+}
+
+
+
+.TOC {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background: #691515;
+  font-family: verdana, sans-serif;
+  font-size:.8em;
+  height:2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
 ul {
-  background: darkorange;
+    list-style: none;
+    font-size: 1em;
+    margin: 0;
+    padding-left: 0;
+    float:right;
+    overflow: hidden;
+    background:black;
+    width:0;
+    position:relative;
+    top: 2rem;
+
+}
+
+#navigation:target {
+  width: 30%;
+}
+
+li {
+    color: #fff;
+    display: block;
+    padding: .3rem .5rem;
+    position: relative;
+    text-decoration: none;
+    min-width: 4rem;
+}
+
+
+
+
+li a {
+  color: #fff;
+}
+
+li:hover a {
+    cursor: pointer;
+}
+
+
+
+ul li ul {
+  display:block;
+  width:100%;
+  padding:0;
+  left: 0;
+  font-size: .7em;
+  /* display: none; */
+  float:none;
+  margin:0;
+  position:static;
+}
+
+ul li ul li {
+min-width:4rem;
+}
+
+ul li:hover > ul, ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+
+/* now follows the media query that displays everyhing correctly on wider screens */
+
+@media only screen and (min-width: 720px) {
+
+h1.act, h1.dramatishead {
+  font-size: 200%;
+}
+
+
+
+a.menu {
+  display:none;
+}
+
+ul {
+  background: #691515;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -92,12 +240,11 @@ ul {
   top:0;
   left:0;
   width: 100%;
-
 }
 
 li {
     color: #fff;
-  background: darkorange;
+  background: #691515;
     display: block;
     float: left;
     padding: 1rem;
@@ -121,7 +268,7 @@ li:focus-within a {
 }
 
 ul li ul {
-    background: orange;
+    background: #691515;
     visibility: hidden;
   opacity: 0;
   min-width: 4rem;
@@ -147,8 +294,17 @@ ul li ul li {
   width: 100%;
 }
 
-@media screen and (min-width: 600px) {
-body {
-  font-size: 100%;
+
+#navigation:target {
+  width: auto;
 }
+
+p.prose, p.verseline {
+margin: 0 12px 0 60px;
+}
+
+p.prose {
+  margin-bottom: 12px;
+}
+
 }
