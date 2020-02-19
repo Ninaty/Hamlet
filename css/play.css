@@ -264,7 +264,7 @@ ul li:hover > ul, ul li ul:hover {
 
   li:hover,
   li:focus-within {
-      background: red;
+      background: gray;
       cursor: pointer;
   }
 
@@ -306,4 +306,17 @@ ul li:hover {
     margin-bottom: 12px;
   }
 
+}
+
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 719px) {
+  .menu a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .menu a.icon {
+    float: right;
+    display: block;
+  }
 }
