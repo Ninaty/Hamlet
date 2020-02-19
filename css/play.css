@@ -1,0 +1,154 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+}
+body {
+font: Palatino, Garamond, Times, serif;
+  margin: 20px;
+  background-color: rgb(179, 179, 179);
+}
+
+section.TOC {
+margin: 0px;
+padding: 0px;
+}
+
+
+
+
+section.dramatis, section.play {
+  width: 70%;
+  margin: 12px auto;
+  max-width: 1250px;
+  border: 2px solid grey;
+  padding: 0px 10px;
+  background-color: white;
+}
+
+section.dramatis {
+padding-top: 20px;
+
+}
+
+div.sceneImage {
+}
+
+h1.act, h1.dramatishead {
+text-align: center;
+background-color: grey;
+color: white;
+font-size: 2em;
+padding: 12px 0;
+}
+p.character {
+font-size: 1.4em;
+color: #921215;
+}
+p.charactername {
+  margin: 0 12px 0 10px;
+  color: #921215;
+}
+
+h2.firstscene {
+
+}
+h2.location {
+
+}
+p.play_location {
+
+}
+p.prose {
+  margin: 0 12px 0 60px;
+
+}
+h2.scene {
+
+}
+p.song {
+  margin: 0 12px 0 60px;
+}
+h2.stagedirection {
+
+}
+p.verseline {
+  margin: 0 12px 0 60px;
+
+}
+span.character_role {
+  color: black;
+}
+
+span.stage_directions_inline {
+
+}
+
+
+ul {
+  background: darkorange;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  padding-top: 0px;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+
+}
+
+li {
+    color: #fff;
+  background: darkorange;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li a {
+  color: #fff;
+}
+
+li:hover,
+li:focus-within {
+    background: red;
+    cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+    background: orange;
+    visibility: hidden;
+  opacity: 0;
+  min-width: 4rem;
+    position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+    left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+ul li ul li {
+    clear: both;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+body {
+  font-size: 100%;
+}
+}
