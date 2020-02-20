@@ -9,7 +9,7 @@ body {
 
 section.TOC {
 margin: 0px;
-padding-bottom: 10px;
+padding-bottom: 0px;
 }
 
 
@@ -23,7 +23,12 @@ section.play, section.dramatis  {
 }
 
 /* This extra style rule here makes sure that the linked location is not hidden inder the fixed header */
-
+h1 a, h2 a {
+  margin-top: -2.9rem;
+  padding-bottom: 2.9rem;
+  display:block;
+  background: white;
+}
 
 img {
   width:100%;
@@ -46,7 +51,7 @@ text-align: center;
 font-size: 2em;
 background-color: #691515;
 color:white;
-padding: 12px 0;
+padding: 20px 0;
 }
 
 
@@ -106,13 +111,12 @@ p.playtitle {
   left:0;
   top:0;
   /* height:1rem; */
-  padding: .6rem;
+  padding: .8rem;
   color:white;
   font-family: verdana, sans-serif;
   font-size:.8em;
   z-index: 20;
   margin:0;
-  visibility: hidden;
 }
 
 a.menu {
@@ -143,7 +147,7 @@ a.menu:hover {
   background: #691515;
   font-family: verdana, sans-serif;
   font-size:.8em;
-  height:2.4rem;
+  height:2.8rem;
 }
 
 a {
@@ -157,7 +161,7 @@ ul {
     padding-left: 0;
     float:right;
     overflow: hidden;
-    background:black;
+    background:#691515;
     width:0;
     position:relative;
     top: 2rem;
@@ -176,6 +180,8 @@ li {
     text-decoration: none;
     min-width: 4rem;
 }
+
+
 
 
 li a {
@@ -215,108 +221,64 @@ ul li:hover > ul, ul li ul:hover {
 
 @media only screen and (min-width: 720px) {
 
-  h1.act, h1.dramatishead {
-    font-size: 200%;
-  }
+h1.act, h1.dramatishead {
+  font-size: 200%;
+}
 
-
-
-  a.menu {
-    display:none;
-  }
-
-  ul {
-    background: none;
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    padding-top: 0px;
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-  }
-
-
-  .TOC-Heading-1 {
-    width: 120px;
-  }
-
-  .TOC-Heading-2 {
-    padding: 15px;
-  }
-
-  li {
-      color: #fff;
-      display: block;
-      float: left;
-      padding-top: 1rem;
-      position: relative;
-      text-decoration: none;
-    transition-duration: 0.5s;
-
-  }
-
-  li a {
-    color: #fff;
-    padding: 1rem;
-  }
-
-  li:hover,
-  li:focus-within {
-      background: gray;
-      cursor: pointer;
-  }
-
-  li:focus-within a {
-    outline: none;
-  }
-
-  ul li ul, ul li > ul {
-      background: #691515;
-    visibility: hidden;
-    /* opacity: 0; */
-    min-width: 4rem;
-      /* position: absolute; */
-    transition: all 0.5s ease;
-    margin-top: 1rem;
-  display: none;
-  }
-
-ul li:hover {
-     visibility: visible;
-     display: block;
-  }
-
-  ul li ul li {
-      clear: both;
-    width: 100%;
-  }
-
-
-  #navigation:target {
-    width: auto;
-  }
-
-  p.prose, p.verseline {
-  margin: 0 12px 0 60px;
-  }
-
-  p.prose {
-    margin-bottom: 12px;
-  }
+ul {
+  width:auto;
+  float:right;
+  overflow:visible;
+  position:static;
+  top:inherit;
 
 }
 
 
+li {
+  display:inline-block;
+  height:1.2rem;
+  padding: .8rem .5rem;
+}
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 719px) {
-  .menu a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .menu a.icon {
-    float: right;
-    display: block;
-  }
+a.menu {
+  display:none;
+}
+
+ul li ul {
+  background: rgb(120, 120, 120);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  margin: .8rem 0;
+  padding:0;
+  left: 0;
+  float:right;
+}
+
+li:hover {
+    background: rgb(120, 120, 120);
+    cursor: pointer;
+}
+
+ul li ul li:hover {
+background: rgb(96, 99, 89);
+}
+
+li:hover a {
+  color:white;
+}
+
+#navigation:target {
+  width: auto;
+}
+
+p.prose, p.verseline {
+margin: 0 12px 0 60px;
+}
+
+p.prose {
+  margin-bottom: 12px;
+}
+
 }
