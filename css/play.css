@@ -133,8 +133,9 @@ a.menu {
 }
 
 a.menu:hover {
-  color:red;
+  color:white;
   cursor:pointer;
+  background-color: grey;
 }
 
 
@@ -190,6 +191,7 @@ li a {
 
 li:hover a {
     cursor: pointer;
+      background-color: grey;
 }
 
 
@@ -213,6 +215,7 @@ min-width:4rem;
 ul li:hover > ul, ul li ul:hover {
   visibility: visible;
   opacity: 1;
+  background-color: grey;
   display: block;
 }
 
