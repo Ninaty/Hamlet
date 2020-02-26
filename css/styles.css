@@ -32,17 +32,17 @@ img {
 }
 
 @media screen and (min-width: 600px) {
-  img {
+    img {
     width: 30%;
     float: right;
   }
 
-  div.everything {
-    width: 80%;
-    max-width: 750px;
-    padding: 20px;
-    margin: 10px auto;
-    display: block;
-    border: 1px black solid;
-    background-color: #e9e9e8;
+    div.everything {
+      width: 80%;
+      max-width: 750px;
+      padding: 20px;
+      margin: 10px auto;
+      display: block;
+      border: 1px black solid;
+      background-color: #e9e9e8;}
 }
