@@ -106,6 +106,8 @@ span.stage_directions_inline {
 }
 
 
+
+
 p.playtitle {
   position:fixed;
   left:0;
@@ -114,9 +116,10 @@ p.playtitle {
   padding: .8rem;
   color:white;
   font-family: verdana, sans-serif;
-  font-size:.8em;
+  font-size:1em;
   z-index: 20;
   margin:0;
+  font-weight: bold;
 }
 
 a.menu {
@@ -127,7 +130,7 @@ a.menu {
   padding: .6rem;
   color:white;
   font-family: verdana, sans-serif;
-  font-size:.8em;
+  font-size:1em;
   z-index: 20;
   margin:0;
 }
@@ -147,7 +150,7 @@ a.menu:hover {
   width:100%;
   background: #691515;
   font-family: verdana, sans-serif;
-  font-size:.8em;
+  font-size:1em;
   height:2.8rem;
 }
 
@@ -157,7 +160,7 @@ a {
 
 ul {
     list-style: none;
-    font-size: 1em;
+    font-size: .9em;
     margin: 0;
     padding-left: 0;
     float:right;
@@ -201,7 +204,7 @@ ul li ul {
   width:100%;
   padding:0;
   left: 0;
-  font-size: .7em;
+  font-size: .8em;
   /* display: none; */
   float:none;
   margin:0;
