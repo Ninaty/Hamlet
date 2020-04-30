@@ -294,6 +294,7 @@ p.prose {
 	height: 0;
 	overflow: hidden;
 	margin-bottom: 12px;
+  align-content: center;
 }
 
 .video-box iframe {
