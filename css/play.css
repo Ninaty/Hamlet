@@ -3,8 +3,6 @@ body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
 
 body {
   font-family: verdana, arial, sans-serif;
-  margin: 20px;
-  background-color: rgb(179, 179, 179);
 }
 
 section.TOC {
