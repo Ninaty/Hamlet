@@ -3,8 +3,6 @@ body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
 
 body {
   font-family: verdana, arial, sans-serif;
-  margin: 20px;
-  background-color: rgb(179, 179, 179);
 }
 
 section.TOC {
@@ -14,12 +12,8 @@ padding-bottom: 0px;
 
 
 section.play, section.dramatis  {
-  width:90%;
-  margin: 12px auto;
-  max-width: 700px;
-  padding:0 10px;
+  margin: 10px auto;
   background-color: white;
-  border:2px solid gray;
 }
 
 /* This extra style rule here makes sure that the linked location is not hidden inder the fixed header */
@@ -226,6 +220,21 @@ ul li:hover > ul, ul li ul:hover {
 /* now follows the media query that displays everyhing correctly on wider screens */
 
 @media only screen and (min-width: 720px) {
+
+  body {
+    font-family: verdana, arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(179, 179, 179);
+  }
+
+  section.play, section.dramatis  {
+    width:90%;
+    margin: 12px auto;
+    max-width: 700px;
+    padding:0 10px;
+    background-color: white;
+    border:2px solid gray;
+  }
 
 h1.act, h1.dramatishead {
   font-size: 200%;
